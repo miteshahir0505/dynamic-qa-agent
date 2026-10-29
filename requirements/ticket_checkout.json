@@ -1,0 +1,14 @@
+{
+  "project": "E-Commerce Checkout",
+  "summary": "Implement secure checkout, order subtotal calculation, and payment processing",
+  "description": "Customers must be able to securely complete checkout and payment without duplicate charges, gateway timeout failures, or math mismatches.",
+  "acceptance_criteria": [
+    "**Calculation Precision:** Cart subtotal, taxes, and final total calculations must match down to two decimal places without rounding errors.",
+    "**Gateway Timeouts:** Payment gateway timeouts (after 30 seconds) must trigger a graceful fallback message without double-charging the user.",
+    "**Button Debounce:** Rapid clicking on the 'Place Order' button must be blocked by frontend debounce to prevent duplicate order generation.",
+    "**Data Privacy & Masking:** Sensitive credit card data must be masked in transit and never logged in plain text in system logs or error reports.",
+    "**Secure Payment:** Payment details must go through a secure payment gateway. Sending raw card details over an unsecured connection must fail immediately.",
+    "**Safe Typing:** Address and zip code boxes must clean up any weird text or code attempts to keep the system safe from malicious inputs.",
+    "**Order Wrap-Up:** After placing an order, the confirmation page and email should show the right info safely and give a working link to set up a password."
+  ]
+}

@@ -1,0 +1,8 @@
+.env
+venv/
+node_modules/
+local_storage/
+chomadb_storage/
+dist/
+*.js.map
+swagger-ui-es-bundle.js

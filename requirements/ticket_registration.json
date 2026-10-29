@@ -1,0 +1,16 @@
+{
+  "project": "User Registration",
+  "summary": "Implement user registration form with firstname, lastname, email, password, and terms acceptance",
+  "description": "Users must be able to register using a valid email and a secure password (minimum 8 characters, at least 1 number and 1 special character). Must check 'Agree to Terms' before submitting. On success, redirect to profile completion.",
+  "acceptance_criteria": [
+    "Email must be in a valid format.",
+    "Email used must be unique, show validation error if already used email used again",
+    "Password must meet complexity rules (5+ chars, 1 number, 1 special char).",
+    "There should be password and confirm password field, password and confirm password field should be matched",
+    "If password and confirm password field not matched then show validation",
+    "Validation for firstname and lastname field for minimum and maximum allowed characters",
+    "Minimum of 2 and maximum of 10 characters are allowed in firstname and lastname field",
+    "Submit button disabled until terms are checked.",
+    "Successful registration redirects to /profile/complete."
+  ]
+}
