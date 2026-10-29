@@ -4,21 +4,20 @@ An intelligent, enterprise-grade quality assurance automation framework that bri
 
 ---
 
-## 📋 Table of Contents
-1. [Plain English Summary (For Non-Technical Stakeholders)](#-plain-english-summary-for-non-technical-stakeholders)
-2. [Overview](#-overview)
-3. [Core Workflows Covered](#-core-workflows-covered)
-4. [System Architecture](#-system-architecture)
-5. [Tech Stack](#️-tech-stack)
-6. [Prerequisites](#-prerequisites)
-7. [Installation & Setup](#-installation--setup)
-8. [Configuration Guide](#-configuration-guide)
-9. [Execution Guide & Examples](#-execution-guide--examples)
-10. [Resiliency & Offline Fallback Mode](#️-resiliency--offline-fallback-mode)
+## Table of Contents
+1. [Plain English Summary For Non-Technical Stakeholders](#plain-english-summary-for-non-technical-stakeholders)
+2. [Overview](#overview)
+3. [Core Workflows Covered](#core-workflows-covered)
+4. [System Architecture](#system-architecture)
+5. [Tech Stack](#tech-stack)
+6. [Prerequisites](#prerequisites)
+7. [Quick Start Guide For Developers](#quick-start-guide-for-developers)
+8. [Execution Examples and Expected Output](#execution-examples-and-expected-output)
+9. [Resiliency and Offline Mode](#resiliency-and-offline-mode)
 
 ---
 
-## 📖 Plain English Summary (For Non-Technical Stakeholders)
+## Plain English Summary For Non-Technical Stakeholders
 
 ### What is this project?
 Imagine hiring a meticulous software tester who never sleeps. Whenever your website changes, this "agent" automatically opens a web browser, clicks through your website just like a real customer would, and checks two things:
@@ -35,7 +34,7 @@ The **Dynamic QA Agent** solves this by acting like a smart judge:
 
 ---
 
-## 🔍 Overview
+## Overview
 
 Traditional test automation checks whether UI components render or buttons click, but often fails to verify if complex business rules and feature acceptance criteria are genuinely met. The **Dynamic QA Agent** bridges this gap by combining programmatic web browser automation with semantic vector search and LLM-driven evaluation. 
 
@@ -43,7 +42,7 @@ When a test run executes, the agent dynamically fetches official acceptance crit
 
 ---
 
-## 🚀 Core Workflows Covered
+## Core Workflows Covered
 
 The framework focuses on four critical e-commerce and user account journeys:
 - **User Registration (`registration`):** Validates account creation constraints, password complexity rules, mandatory fields, and duplicate email prevention.
@@ -53,7 +52,7 @@ The framework focuses on four critical e-commerce and user account journeys:
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```text
 ┌─────────────────────────────┐        ┌──────────────────────────────┐
@@ -82,7 +81,7 @@ The framework focuses on four critical e-commerce and user account journeys:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Languages:** TypeScript, JavaScript, Python (3.10+)
 * **Browser Automation:** Playwright
@@ -91,7 +90,7 @@ The framework focuses on four critical e-commerce and user account journeys:
 
 ---
 
-## 📦 Prerequisites
+## Prerequisites
 
 Ensure you have the following installed on your machine:
 * **Node.js** (v18 or higher recommended)
@@ -100,7 +99,7 @@ Ensure you have the following installed on your machine:
 
 ---
 
-## 🚀 Quick Start Guide (For Developers)
+## Quick Start Guide For Developers
 
 ### Step 1: Clone and Install Dependencies
 Open your terminal in the project folder and run:
@@ -132,7 +131,7 @@ npx tsx source/run_dynamic_evaluation.ts
 
 ---
 
-## 🏃 Execution Examples & Expected Output
+## Execution Examples and Expected Output
 
 When you run the evaluation suite, you will see structured console output detailing the retrieval, execution, and grading process:
 
@@ -147,7 +146,7 @@ When you run the evaluation suite, you will see structured console output detail
 
 ---
 
-## 🛡️ Resiliency & Offline Mode
+## Resiliency and Offline Mode
 
 * **Live AI Mode (`USE_LOCAL_JUDGE=false`):** Routes evaluation requests to the Google Gemini API with a strict 45-second timeout guard to ensure pipelines never hang.
 * **Offline Fallback Mode (`USE_LOCAL_JUDGE=true`):** Evaluates test rules locally using deterministic matching, ensuring your test suite runs smoothly without internet access or API rate-limit interruptions.
